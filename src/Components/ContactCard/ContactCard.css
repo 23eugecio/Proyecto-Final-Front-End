@@ -1,0 +1,94 @@
+.contact-container {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #2180a8;
+}
+
+.contact-container .frente {
+    text-decoration: none;
+    color: #261b1b;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+}
+
+.contact-container:hover {
+    background-color: #45acd8;
+    color: #fff;
+    cursor: pointer;
+}
+
+.frente {
+    text-decoration: none;
+    color: #261b1b;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+}
+
+.frente .contact-name {
+    font-size: 20px;
+    font-weight: 15px;
+    font-family: "Noto Sans", sans-serif;
+    margin-bottom: 5px;
+    color: black;
+
+}
+
+.icons {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 15px;
+}
+
+
+.button {
+    padding: 2px;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.last-connection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 10px;
+    font-size: 13px;
+    font-weight: 5px;
+    margin-bottom: 0px;
+    color: #222427;
+}
+
+.frente .profile-pic {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #2180a8;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+
+}
+
+.frente .profile-pic img {
+    width: 40px;
+}

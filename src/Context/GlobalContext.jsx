@@ -1,22 +1,22 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext,  useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 import { DATA_CONTACTOS } from "../Data/contactsData";
 
 const GlobalContext = createContext();
-export const contacts = DATA_CONTACTOS;
+export const initialContacts = DATA_CONTACTOS;
 
 export const GlobalProvider = ({ children }) => {
     const [contacts, setContacts] = useState(() => {
         const savedContacts = localStorage.getItem('contacts');
-        return savedContacts ? JSON.parse(savedContacts) : DATA_CONTACTOS;
+        return savedContacts ? JSON.parse(savedContacts) : initialContacts;
     });
 
     const navigate = useNavigate();
 
-    const handleCreateContact = (contacts) => {
+    const handleCreateContact = (contactData) => {
         const newContact = {
-            ...contacts,
+            ...contactData,
             id: uuid(),
         };
         const newContacts = [...contacts, newContact];
@@ -32,6 +32,8 @@ export const GlobalProvider = ({ children }) => {
         setContacts(updatedContacts);
         localStorage.setItem('contacts', JSON.stringify(updatedContacts));
     };
+
+
 
     return (
         <GlobalContext.Provider value={{ contacts, handleCreateContact, handleEditContact }}>

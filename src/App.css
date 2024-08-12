@@ -64,17 +64,13 @@ body {
     padding: 0px 10px;
 }
 
-
 .message-container {
     width: 100%;
     padding: 10px;
-    margin-top: 50px;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-
-
 
 .message-container span {
     display: flex;

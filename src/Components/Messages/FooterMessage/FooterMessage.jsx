@@ -30,7 +30,7 @@ const FooterMessage = ({ addMessage }) => {
                         type="text"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        placeholder='mensaje'
+                        placeholder='Mensaje'
                         className='message-field'
                     />
                     <span className="icons">

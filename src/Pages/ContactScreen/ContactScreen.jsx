@@ -24,7 +24,6 @@ const ContactScreen = () => {
                     </div>
                 </div>
                 <ContactList contactos={DATA_CONTACTOS} onEdit={Chat} />
-            
             <div className='home-footer'>
                 <i className="bi bi-chat-square-text"></i>
                 <i className="bi bi-people"></i>

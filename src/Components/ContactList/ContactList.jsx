@@ -6,7 +6,7 @@ import './ContactList.css';
 const ContactList = ({ contactos }) => {
 
     return (
-        <div>
+        <div className="contact-list">
             {contactos.map(contact => (
                 <ContactCard contact={contact} key={contact.id} />
             ))}

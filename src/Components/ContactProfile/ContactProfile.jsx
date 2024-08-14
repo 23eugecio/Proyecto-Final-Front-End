@@ -38,20 +38,20 @@ const ContactProfile = ({ contact, onEdit, onCreate }) => {
                     <i className="bi bi-search">Buscar</i>
                 </button>
             </div>
-            <div className='profile-options'>
-                <button>
-                    <i className="bi bi-heart"> Añadir a Favoritos </i>
-                </button>
-                <button onClick={onEdit}>
-                    <i className="bi bi-pencil-square"> Editar </i>
-                </button>
-                <button onClick={onCreate}>
-                    <i className="bi bi-plus-circle"> Agregar </i>
-                </button>
-                <button>
-                    <i className="bi bi-hand-thumbs-down"> Reportar </i>
-                </button>
-            </div>
+                <div className='profile-options'>
+                    <button>
+                        <i className="bi bi-heart"> Añadir a Favoritos </i>
+                    </button>
+                    <button onClick={onEdit}>
+                        <i className="bi bi-pencil-square"> Editar </i>
+                    </button>
+                    <button onClick={onCreate}>
+                        <i className="bi bi-plus-circle"> Agregar </i>
+                    </button>
+                    <button>
+                        <i className="bi bi-hand-thumbs-down"> Reportar </i>
+                    </button>
+                </div>
         </div>
     )
 }

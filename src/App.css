@@ -86,3 +86,14 @@ body {
     color: #000000;
     padding-bottom: 3px;
 }
+
+@media screen and (max-width: 2000px) {
+    .whatsapp {
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: #ffffff;
+}
+
+}

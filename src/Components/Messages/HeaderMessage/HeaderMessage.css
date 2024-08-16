@@ -45,11 +45,19 @@
 
 .whatsapp .header .back i {
     color: #ffffff;
+    font-size: 20px;
+    margin-left: 10px;
+    border: none;
 }
+
 
 .whatsapp .header .back {
     color: rgb(52, 109, 233);
     margin: 10px;
+    padding: 2px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
 }
 
 .whatsapp .header .videocall {

@@ -5,6 +5,7 @@ import './Profile.css'
 import GlobalContext from '../../Context/GlobalContext'
 import DATA_CONTACTOS from '../../Data/contactsData'
 
+
 const Profile = () => {
     const { contact_id } = useParams()
     const { contacts, handleCreateContact, handleEditContact } = useContext(GlobalContext)

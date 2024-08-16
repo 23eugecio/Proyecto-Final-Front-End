@@ -155,7 +155,7 @@ export const DATA_CONTACTOS = [
                 id: 1
             }
         ],
-    },
+    }
 ];
 
 export default DATA_CONTACTOS;

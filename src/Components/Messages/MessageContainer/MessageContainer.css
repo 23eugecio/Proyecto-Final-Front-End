@@ -2,7 +2,6 @@
     max-width: 60%;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0px, 0px, 5px #3840d5af;
     display: inline-block;
     word-wrap: break-word;
 }
@@ -15,7 +14,7 @@
 
 .content {
     margin-bottom: 5px;
-    color:#181616
+    color:#181616;
 }
 
 .date-status {

@@ -55,7 +55,8 @@
 .footerMessage .message-input .emojis i {
     display: flex;
     align-items: center;
-    color: black;
+    font-size: 20px;
+    color: #f19c2d;
     padding: 0px 0px 0px 20px
 }
 
@@ -64,12 +65,12 @@
     display: flex;
     align-items: center;
     justify-content: center; 
-    color: black
+    color: #f19c2d
 }
 
 .footerMessage .message-input .files i {
     border-radius: 80px;
-    color: black
+    color: #f19c2d
 }
 
 .footerMessage .send i {

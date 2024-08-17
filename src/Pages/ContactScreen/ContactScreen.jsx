@@ -16,7 +16,7 @@ const ContactScreen = () => {
         <div className='home-container'>
             <div className='home-whatsapp'>
                 <div className='home-top-bar'>
-                    <span>Contactos</span>
+                    <span>WhatsApp</span>
                     <div className='icons'>
                         <i className="bi bi-camera-video"></i>
                         <i className='bi bi-search'></i>

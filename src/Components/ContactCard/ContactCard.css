@@ -1,12 +1,11 @@
 .contact-container {
     width: 100%;
-    height: 80px;
+    height: 100px;
     display: flex;
     flex-direction: row;
     align-items: center;
     background-color: #fff;
-    padding: 10px;
-    border-bottom: 1px solid #08854f;
+    border-bottom: 1px solid #08854f ;
 }
 
 .contact-container .frente {
@@ -21,8 +20,7 @@
 .contact-container:hover {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    background-color: #08854f;
+    background-color: #5ebf95;
     color: #fff;
     cursor: pointer;
 }
@@ -39,10 +37,8 @@
 .frente .contact-name {
     font-size: 20px;
     font-weight: 15px;
-    font-family: "Noto Sans", sans-serif;
-    margin-bottom: 5px;
+    font-family: "Poppins", sans-serif;;
     color: black;
-
 }
 
 .icons {
@@ -76,7 +72,7 @@
 .frente .profile-pic {
     width: 40px;
     height: 40px;
-    border: 1px solid #08854f;
+    border: 1px solid  ;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
@@ -100,13 +96,12 @@
 
     .contact-container {
         width: 100%;
-        height: 100px;
+        height: 110px;
         display: flex;
         flex-direction: row;
         align-items: center;
         background-color: #fff;
-        padding: 10px;
-        border-bottom: 1px solid #08854f;
+        border-bottom: 1px solid  #08854f;
     }
 
     .contact-container:hover {

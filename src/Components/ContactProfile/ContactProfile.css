@@ -7,7 +7,7 @@
     position: relative;
     align-items: center;
     overflow-y: auto;
-    background-color: #08854f;
+    background: linear-gradient(to right, #f19c2d , #08854f) ;
 }
 
 .profile-content button {
@@ -18,18 +18,19 @@
 }
 
 .profile-content button i {
-    color: black;
+    color: white;
     display: flex;
     flex-direction: center;
     align-items: center;
     font-size: 20px;
 }
 .profile-topbar {
-    color: black;
+    color: white;
     display: flex;
     flex-direction: center;
     align-items: center;
     font-size: 20px;
+    background: linear-gradient(to right, #f19c2d , #08854f) ;
 }
 .profile-content .profile-topbar {
     display: flex;
@@ -43,7 +44,7 @@
     width: 170px;
     height: 180px;
     border-radius: 50%;
-    border: 3px solid black;
+    border: 3px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,14 +59,14 @@
 }
 
 .profile-content .h3 {
-    color: black;
+    color: white;
     font-size: 25px;
-    font-weight: 400;
+    font-weight: 500;
 }
 .profile-content .profile-contact-name{
-    color: black;
+    color: #02150d;
     font-size: 25px;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .profile-content .profile-icons {
@@ -81,7 +82,7 @@
     align-items: center;
     color: black;
     font-size: 13px;
-    font-weight: 300;
+    font-weight: 500;
     border-radius: 5px;
     margin-bottom: 10px;
 }
@@ -89,14 +90,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: black;
+    color: #02150d;
     font-size: 20px;
-    padding: 10px;
-    font-weight: 300;
+    padding: 8px;
+    font-weight: 500;
     margin-top: 40px;
-    border: 1px solid #2b2a2a;
+    border: 1px solid white;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px #2b2a2a;
+    box-shadow: 0px 0px 5px white;
 }
 
 
@@ -125,9 +126,9 @@
     flex-direction: center;
     align-items: center;
     padding: 10px;
-    color: rgb(168, 4, 4);
+    color: #f4e924;
     font-size: 15px;
-    border: 1px solid black;
+    border: 3px solid white;
     border-radius: 5px;
     margin-bottom: 20px;
     cursor: pointer;
@@ -137,15 +138,16 @@
     display: flex;
     flex-direction: center;
     align-items: center;
-    color: black;
+    color: #02150d;
     font-size: 20px;
-    font-size: 15px;
+    font-weight: 600;
     margin-right: 10px;
 }
 
 .profile-content .profile-options .bi-heart {
-    color: rgb(211, 5, 5);
+    color: #02150d;
     font-size: 20px;
+    font-weight: 600;
     margin-right: 10px;
 }
 

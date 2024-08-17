@@ -28,7 +28,7 @@ const ChatScreen = () => {
             <div className="whatsapp">
 
                 <HeaderMessage contactName={contact.nombre} />
-                <Link to={'/profile/' + contact.id}>PERFIL</Link>
+                <span className="profile"><Link to={'/profile/' + contact.id}>PERFIL</Link></span>
                 <MessageContainer messages={messages} />
                 <FooterMessage addMessage={addMessage} />
 

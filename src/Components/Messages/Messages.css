@@ -2,16 +2,15 @@
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-
 }
 
 .message-right {
-    background-color: #eb8612;
+    background-color: #08854f;
     align-self: flex-end;
 }
 
 .message-left {
-    background-color: #40d243;
+    background-color: #f19c2d;
     align-self: flex-start;
 }
 

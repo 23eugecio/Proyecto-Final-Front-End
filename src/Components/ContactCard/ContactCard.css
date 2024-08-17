@@ -6,7 +6,7 @@
     align-items: center;
     background-color: #fff;
     padding: 10px;
-    border-bottom: 1px solid #2180a8;
+    border-bottom: 1px solid #08854f;
 }
 
 .contact-container .frente {
@@ -22,7 +22,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #45acd8;
+    background-color: #08854f;
     color: #fff;
     cursor: pointer;
 }
@@ -76,7 +76,7 @@
 .frente .profile-pic {
     width: 40px;
     height: 40px;
-    border: 1px solid #2180a8;
+    border: 1px solid #08854f;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
@@ -106,14 +106,14 @@
         align-items: center;
         background-color: #fff;
         padding: 10px;
-        border-bottom: 1px solid #2180a8;
+        border-bottom: 1px solid #08854f;
     }
 
     .contact-container:hover {
         display: flex;
         flex-direction: row;
         align-items: center;
-        background-color: #45acd8;
+        background-color: #4bb688;
         color: #fff;
         cursor: pointer;
     }

@@ -2,9 +2,10 @@ import React from 'react'
 import './HeaderMessage.css'
 import { Link } from 'react-router-dom'
 
+
 const HeaderMessage = ({ contactName }) => {
     return (
-        <nav className="header">
+        <div className="header">
             <button className="back"><Link to={'/'}><i className="bi bi-arrow-left"></i></Link></button>
             <span className='name'>
                 {contactName}</span>
@@ -17,7 +18,8 @@ const HeaderMessage = ({ contactName }) => {
             <span className="three-dots">
                 <i className="bi bi-three-dots-vertical"></i>
             </span>
-        </nav>
+            
+        </div>
     )
 }
 

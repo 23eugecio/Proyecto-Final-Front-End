@@ -26,32 +26,35 @@ const ContactProfile = ({ contact, onEdit, onCreate }) => {
             <div className="profile-profile-pic">
                 <img src={contact.thumbnail} className="profile-pic" alt="" />
             </div>
-            <h3 className="profile-contact-name">{contact.nombre}</h3>
+            <div><h3 className="profile-contact-name">{contact.nombre}</h3>
+            </div>
+            <div className='profile-last-connection'>Última sesión: {contact.ultima_conexion}</div>
+            <div className='profile-separator'></div>
             <div className="profile-icons">
                 <button>
-                    <i className="bi bi-telephone">Llamar</i>
+                    <i className="bi bi-telephone"> Llamar</i>
                 </button>
                 <button>
-                    <i className="bi bi-camera-video">Video</i>
+                    <i className="bi bi-camera-video"> Video</i>
                 </button>
                 <button>
-                    <i className="bi bi-search">Buscar</i>
+                    <i className="bi bi-search"> Buscar</i>
                 </button>
             </div>
-                <div className='profile-options'>
-                    <button>
-                        <i className="bi bi-heart"> Añadir a Favoritos </i>
-                    </button>
-                    <button onClick={onEdit}>
-                        <i className="bi bi-pencil-square"> Editar </i>
-                    </button>
-                    <button onClick={onCreate}>
-                        <i className="bi bi-plus-circle"> Agregar </i>
-                    </button>
-                    <button>
-                        <i className="bi bi-hand-thumbs-down"> Reportar </i>
-                    </button>
-                </div>
+            <div className='profile-options'>
+                <button>
+                    <i className="bi bi-heart"> Añadir a Favoritos </i>
+                </button>
+                <button onClick={onEdit}>
+                    <i className="bi bi-pencil-square"> Editar </i>
+                </button>
+                <button onClick={onCreate}>
+                    <i className="bi bi-plus-circle"> Agregar </i>
+                </button>
+                <button>
+                    <i className="bi bi-hand-thumbs-down"> Reportar </i>
+                </button>
+            </div>
         </div>
     )
 }

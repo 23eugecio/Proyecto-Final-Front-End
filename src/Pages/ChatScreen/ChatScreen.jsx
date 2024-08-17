@@ -5,6 +5,7 @@ import { FooterMessage, HeaderMessage } from '../../Components/index.js';
 import MessageContainer from '../../Components/Messages/MessageContainer/MessageContainer.jsx';
 import '../../App.css';
 
+
 const ChatScreen = () => {
     const { contact_id } = useParams();
     const contact = DATA_CONTACTOS.find(contact => contact.id.toString() === contact_id);
@@ -25,11 +26,12 @@ const ChatScreen = () => {
     return (
         <div className="app-container">
             <div className="whatsapp">
+
                 <HeaderMessage contactName={contact.nombre} />
                 <Link to={'/profile/' + contact.id}>PERFIL</Link>
                 <MessageContainer messages={messages} />
                 <FooterMessage addMessage={addMessage} />
-                
+
             </div>
         </div>
     );

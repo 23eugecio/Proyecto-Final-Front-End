@@ -14,6 +14,11 @@ export const GlobalProvider = ({ children }) => {
 
     const navigate = useNavigate();
 
+        const handleContactProfile = (id) => {
+            const contact = DATA_CONTACTOS.find((contact) => contact.id === id);
+            navigate(`/profile/${id}`, { state: { contact } });
+        }
+
     const handleCreateContact = (contactData) => {
         const newContact = {
             ...contactData,
@@ -36,7 +41,7 @@ export const GlobalProvider = ({ children }) => {
 
 
     return (
-        <GlobalContext.Provider value={{ contacts, handleCreateContact, handleEditContact }}>
+        <GlobalContext.Provider value={{ handleContactProfile, handleCreateContact, handleEditContact }}>
             {children}
         </GlobalContext.Provider>
     );

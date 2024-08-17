@@ -36,8 +36,6 @@ body {
     flex-direction: column;
     width: 320px;
     height: 608px; 
-
-
     position: fixed;
     flex-direction: column;
     background-image: url('/Imagenes/chat_WA_StarWars.jpg');

@@ -1,6 +1,6 @@
 .profile-content {
     width: 320px;
-    height: 900px;
+    height: 608px;
     display: flex;
     flex-direction: column;
     border-radius: 15px;
@@ -18,14 +18,14 @@
 }
 
 .profile-content button i {
-    color: white;
+    color: black;
     display: flex;
     flex-direction: center;
     align-items: center;
     font-size: 20px;
 }
 .profile-topbar {
-    color: white;
+    color: black;
     display: flex;
     flex-direction: center;
     align-items: center;
@@ -44,7 +44,7 @@
     width: 170px;
     height: 180px;
     border-radius: 50%;
-    border: 3px solid white;
+    border: 3px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +59,7 @@
 }
 
 .profile-content .h3 {
-    color: white;
+    color: black;
     font-size: 25px;
     font-weight: 500;
 }
@@ -82,7 +82,7 @@
     align-items: center;
     color: black;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 400;
     border-radius: 5px;
     margin-bottom: 10px;
 }
@@ -91,13 +91,13 @@
     flex-direction: column;
     align-items: center;
     color: #02150d;
-    font-size: 20px;
+    font-size: 15px;
     padding: 8px;
     font-weight: 500;
-    margin-top: 40px;
-    border: 1px solid white;
+    margin-top: 20px;
+    border: 1px solid black;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px white;
+    box-shadow: 0px 0px 5px black;
 }
 
 
@@ -108,7 +108,7 @@
     width: 100%;
     height: 100px;
     align-items: flex-end;
-    margin-top: 50px;
+    margin-top: 5px;
 } 
 
 .profile-content .profile-options {
@@ -118,7 +118,7 @@
     width: 100%;
     height: 100px;
     align-items: start;
-    margin-top: 50px;
+    margin-top: 15px;
 }
 
 .profile-content .profile-options button {
@@ -128,9 +128,10 @@
     padding: 10px;
     color: #f4e924;
     font-size: 15px;
-    border: 3px solid white;
+    border: 1px solid black;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    background-color: transparent;
     cursor: pointer;
 }
 
@@ -138,16 +139,15 @@
     display: flex;
     flex-direction: center;
     align-items: center;
-    color: #02150d;
-    font-size: 20px;
-    font-weight: 600;
-    margin-right: 10px;
+    color: black;
+    font-size: 15px;
+    font-weight: 300;
 }
 
 .profile-content .profile-options .bi-heart {
-    color: #02150d;
-    font-size: 20px;
-    font-weight: 600;
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
     margin-right: 10px;
 }
 

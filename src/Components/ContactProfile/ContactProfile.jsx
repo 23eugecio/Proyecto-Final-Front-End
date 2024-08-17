@@ -29,7 +29,7 @@ const ContactProfile = ({ contact, onEdit, onCreate }) => {
             <div><h3 className="profile-contact-name">{contact.nombre}</h3>
             </div>
             <div className='profile-last-connection'>Última sesión: {contact.ultima_conexion}</div>
-            <div className='profile-separator'></div>
+
             <div className="profile-icons">
                 <button>
                     <i className="bi bi-telephone"> Llamar</i>
@@ -43,7 +43,7 @@ const ContactProfile = ({ contact, onEdit, onCreate }) => {
             </div>
             <div className='profile-options'>
                 <button>
-                    <i className="bi bi-heart"> Añadir a Favoritos </i>
+                    <i className="bi bi-heart"> Favorito </i>
                 </button>
                 <button onClick={onEdit}>
                     <i className="bi bi-pencil-square"> Editar </i>

@@ -18,17 +18,13 @@
     display: flex;
     position: fixed;
     flex-direction: column;
-    overflow: hidden;
-    overflow-y: scroll;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color:  transparent;
 }
 
 .contacts-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 10px;
 }
 
 .home-top-bar {

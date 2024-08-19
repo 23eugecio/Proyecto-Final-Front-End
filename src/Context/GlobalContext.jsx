@@ -1,4 +1,4 @@
-import React, { createContext, useContext,  useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 import { DATA_CONTACTOS } from "../Data/contactsData";
@@ -14,10 +14,10 @@ export const GlobalProvider = ({ children }) => {
 
     const navigate = useNavigate();
 
-        const handleContactProfile = (id) => {
-            const contact = DATA_CONTACTOS.find((contact) => contact.id === id);
-            navigate(`/profile/${id}`, { state: { contact } });
-        }
+    const handleContactProfile = (id) => {
+        const contact = DATA_CONTACTOS.find((contact) => contact.id === id);
+        navigate(`/profile/${id}`, { state: { contact } });
+    }
 
     const handleCreateContact = (contactData) => {
         const newContact = {

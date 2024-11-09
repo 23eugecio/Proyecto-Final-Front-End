@@ -5,28 +5,28 @@
 }
 
 .message-right {
-    background-color: #08854f;
+    background-color: #80C4E9;
     align-self: flex-end;
 }
 
 .message-left {
-    background-color: #f19c2d;
+    background-color: #604CC3;
     align-self: flex-start;
 }
 
 .author {
-    font-weight: bold;
+    font-weight:300;
     margin-bottom: 5px;
 }
 
 .content {
-    font-size: 13px;
+    font-size: 12px;
     margin-bottom: 5px;
 }
 
 .date-status {
-    font-size: 0.8em;
-    color: #2a2222;
+    font-size: 10px;
+    color: black;
 }
 
 

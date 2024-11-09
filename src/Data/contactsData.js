@@ -141,8 +141,8 @@ export const DATA_CONTACTOS = [
         ],
     },
     {
-        nombre: 'Pepe',
-        thumbnail: '/Imagenes/canario.webp',
+        nombre: 'Franco Colapinto',
+        thumbnail: '/Imagenes/franco.avif',
         ultima_conexion: 'ayer',
         id: 6,
         mensajes: [

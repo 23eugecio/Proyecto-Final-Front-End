@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { ContactScreen, ChatScreen, Profile } from './Pages'; 
+import { ContactScreen, ChatScreen, Profile } from './helpers/helpersIndex';
 import './App.css'
 
 const App = () => {
@@ -14,5 +14,4 @@ const App = () => {
 }
 
 export default App
-
 

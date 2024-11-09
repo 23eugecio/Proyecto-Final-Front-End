@@ -38,7 +38,7 @@ body {
     height: 608px; 
     position: fixed;
     flex-direction: column;
-    background-image: url('/Imagenes/chat_WA_StarWars.jpg');
+    background-color: #F5F5F5;
     background-size: cover;
     overflow: hidden;
 }
@@ -102,7 +102,7 @@ body {
         height: 100vh;
         border-radius: 15px;
         position: fixed;
-        background-image: url('/Imagenes/chat_WA_StarWars.jpg');
+        background-color: #F5F5F5;
         background-size: cover;
         flex-direction: column;
 }

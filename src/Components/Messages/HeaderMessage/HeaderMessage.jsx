@@ -1,34 +1,28 @@
-import React from 'react';
-import './HeaderMessage.css';
-import { Link } from 'react-router-dom';
-import DATA_CONTACTOS from '../../../Data/contactsData';
+import React from 'react'
+import './HeaderMessage.css'
+import { Link, useParams } from 'react-router-dom'
+import { DATA_CONTACTOS } from '../../../Data/contactsData'
 
-
-
-const HeaderMessage = ({ contactName, thumbnail }) => {
+const HeaderMessage = ({ contactName }) => {
+    const { contact_id } = useParams();
+    const contact = DATA_CONTACTOS.find(contact => contact.id.toString() === contact_id);
     return (
-        <div className="header">
-            <button className="back" aria-label="Back to home">
-                <Link to={'/'}>
-                    <i className="bi bi-arrow-left"></i>
-                </Link>
-            </button>
-            <button className='profile'>
-            <Link to ={'/profile/' + DATA_CONTACTOS[0].id}>
-                <span className="header_user_pic"> 
-                    <img src={`${thumbnail}`} alt={`${contactName}'s profile`} />
-                </span>
-            </Link>
-            </button>
-            <span>{contactName}</span>
-            <span className="icons" aria-label="Video call">
+        <nav className="header">
+            <button className="back"><Link to={'/'}><i className="bi bi-arrow-left"></i></Link></button>
+            <span><Link to={'/profile/' + contact.id}><img src={contact.thumbnail} className="profile-image" alt="" /></Link></span>
+            <span className='name'>
+                {contactName}</span>
+            <span className="videocall">
                 <i className="bi bi-camera-video"></i>
+            </span> 
+            <span className="phonecall">
                 <i className="bi bi-telephone"></i>
+            </span>
+            <span className="three-dots">
                 <i className="bi bi-three-dots-vertical"></i>
             </span>
-        </div>
-    );
+        </nav>
+    )
 }
 
-export default HeaderMessage;
-
+export default HeaderMessage

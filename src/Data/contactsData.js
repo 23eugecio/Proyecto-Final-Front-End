@@ -141,7 +141,7 @@ export const DATA_CONTACTOS = [
         ],
     },
     {
-        nombre: 'Franco Colapinto',
+        nombre: 'Franco C.',
         thumbnail: '/Imagenes/franco.avif',
         ultima_conexion: 'ayer',
         id: 6,
@@ -158,4 +158,4 @@ export const DATA_CONTACTOS = [
     }
 ];
 
-export default DATA_CONTACTOS;
+export default DATA_CONTACTOS

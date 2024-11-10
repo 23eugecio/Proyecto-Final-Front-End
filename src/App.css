@@ -43,9 +43,9 @@ body {
     overflow: hidden;
 }
 
-.whatsapp  a {
+.whatsapp  .top-bar {
     text-decoration: none;
-    color: #f19c2d;
+    color: whitesmoke;
     display: flex;
     flex-direction: column;
     align-items: center;

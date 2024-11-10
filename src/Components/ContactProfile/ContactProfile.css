@@ -41,17 +41,17 @@
 }
 
 .profile-content .profile-profile-pic {
-    width: 170px;
-    height: 180px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     border: 3px solid #604CC3;;
     display: flex;
     justify-content: center;
-    align-items: center;
     overflow: hidden;
+    
 }
 
-.profile-content .profile-profile-pic img {
+.profile-content .profile-profile-pic .img {
     width: 100%;
     height: 100%;
     object-fit: cover;

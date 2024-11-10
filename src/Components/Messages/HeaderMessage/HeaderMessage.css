@@ -18,24 +18,24 @@
 }
 .whatsapp .header button {
     background-color: transparent;
-    margin: 10px;
-    padding: 2px;
-    font-size: 20px;
+    color: whitesmoke;
+    font-size: 13px;
     border: none;
     cursor: pointer;
 }
 
-.header_user_pic {
-    width: 40px;
-    height: 40px;
+.profile-image {
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid  ;
     border-radius: 50%;
     overflow: hidden;
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    border: 1px solid whitesmoke;
-    margin: 10px 20px 10px 0px;
-    padding: 2px;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px; 
+    background-color: whitesmoke;
 }
 
 .whatsapp {
@@ -65,7 +65,7 @@
 
 .header_contact_name{
     color: whitesmoke;
-    font-size: 15px;
+    font-size: 13px;
     padding-left: 5px;
 }
 
@@ -73,7 +73,7 @@
     color: white;
     margin: 10px;
     padding: 2px;
-    font-size: 15px;
+    font-size: 8px;
 }
 
 

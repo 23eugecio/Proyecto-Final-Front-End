@@ -4,7 +4,6 @@ import { DATA_CONTACTOS } from '../../Data/contactsData.js';
 import { FooterMessage, HeaderMessage } from '../../Components/index.js';
 import MessageContainer from '../../Components/Messages/MessageContainer/MessageContainer.jsx';
 import '../../App.css';
-import ContactProfile from '../../Components/ContactProfile/ContactProfile.jsx';
 
 const ChatScreen = () => {
     const { contact_id } = useParams();
@@ -29,6 +28,7 @@ const ChatScreen = () => {
                 <HeaderMessage contactName={contact.nombre} />
                 <MessageContainer messages={messages} />
                 <FooterMessage addMessage={addMessage} />
+                
             </div>
         </div>
     );

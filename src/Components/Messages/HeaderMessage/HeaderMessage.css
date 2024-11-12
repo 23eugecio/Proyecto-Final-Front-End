@@ -1,11 +1,14 @@
 .header {
     display: flex;
     flex-direction: row;
-    background-color: #604CC3; ;
+    background-color: #604CC3; 
+    position: fixed;
+    top: 0px;
     width: 100%;
-    height: 60px;
+    height: 100px;
     align-items: center;
     justify-content: space-between;
+
 }
 .whatsapp .header {
     display: flex;
@@ -15,6 +18,7 @@
     height: 50px;
     align-items: center;
     justify-content: space-between;
+
 }
 .whatsapp .header button {
     background-color: transparent;
@@ -44,17 +48,16 @@
     font-size: 20px;
     color: whitesmoke;
     font-weight: 500;
-    padding-left: 5px;
-    justify-content: center;
+
 }
 
 
-.whatsapp .header .back {
+/* .whatsapp .header .back {
     color: whitesmoke;
     margin: 10px;
     padding: 2px;
     font-size: 20px;
-}
+} */
 
 .whatsapp .header .back i {
     color: whitesmoke;
@@ -79,14 +82,24 @@
 
 @media screen and (max-width: 2000px) {
 
+    .header{
+        display: flex;
+        flex-direction: row;
+        background-color: #604CC3; ;
+        width: 100%;
+        height: 100px;
+        align-items: center;
+        justify-content: space-between; 
+    }
     .whatsapp .header {
         display: flex;
         flex-direction: row;
         background-color: #604CC3;
         width: 100%;
-        height: 50px;
+        height: 60px;
         align-items: center;
         justify-content: space-between;
     }
+
     
 }

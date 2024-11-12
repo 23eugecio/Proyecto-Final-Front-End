@@ -10,8 +10,7 @@
     width: 320px;
     height: 720px;
     background-color: #B7B7B7;
-    border: 3px solid #4b6f79;
-    border-radius: 15px;
+    border: 3px;
     display: flex;
     position: relative;
     align-items: center;

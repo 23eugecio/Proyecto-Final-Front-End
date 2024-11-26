@@ -1,0 +1,118 @@
+
+
+.register-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 480px) {
+    .register-container {
+        width: 90%;
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+    .register-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .register-container input {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .register-container button {
+        font-size: 0.9rem;
+    }
+}
+
+.register-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.register-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-container form > div {
+    margin-bottom: 15px;
+}
+
+.register-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.register-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.register-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-container button:hover {
+    background-color: #0056b3;
+}
+
+
+.error-message {
+    color: red;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.success-message {
+    color: green;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.form-info {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.form-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.form-info a:hover {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .register-container {
+        width: 95%;
+        max-width: 350px;
+    }
+}

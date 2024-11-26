@@ -1,0 +1,82 @@
+
+.create-contact-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+.create-contact-form > div {
+    margin-bottom: 15px;
+}
+
+.create-contact-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.create-contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create-contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+
+@media screen and (max-width: 480px) {
+    .create-contact-form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .create-contact-form input {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .create-contact-form button {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .create-contact-form {
+        max-width: 350px;
+        padding: 15px;
+    }
+}
+
+
+@media screen and (min-width: 769px) {
+    .create-contact-form {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+}
+
+
+@media (hover: none) and (pointer: coarse) {
+    .create-contact-form input,
+    .create-contact-form button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}

@@ -1,48 +1,139 @@
-.contact-name{
-    font-size: 15px;
-    font-weight: 15px;
-    margin-bottom: 5px;
-    color: black;
+.contact-list-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.contact-list {
+.contact-list-header {
     display: flex;
-    flex-direction: column;
-    padding-top: 53px;
-    gap: 10px;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-}
-
-.contact-list::-webkit-scrollbar {
-    width: 0px; 
-}
-
-.home-container .home-whatsapp .contact-list .contact {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-    width: 100%;
-    height: 50px;
-    background-color: transparent;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-list-header h2 {
+    margin: 0;
+    color: #333;
+}
+
+.add-contact-btn {
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
     border-radius: 5px;
-    padding: 5px;
+    transition: background-color 0.3s;
 }
 
-.home-container .home-whatsapp .contact-list .contact:hover {
-    cursor: pointer;
+.add-contact-btn:hover {
+    background-color: #45a049;
 }
 
-.home-top-bar {
+.contact-list-controls {
     display: flex;
     justify-content: space-between;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 60px;
-    padding: 0px 10px;
-    align-items: center;
+    margin-bottom: 20px;
 }
 
+.search-input {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.sort-select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.contact-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.contact-card:hover {
+    transform: scale(1.02);
+}
+
+.contact-card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-card-content h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.contact-card-content p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.contact-card-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.view-profile-btn, .delete-contact-btn {
+    flex-grow: 1;
+    margin: 0 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-profile-btn {
+    background-color: #2196F3;
+    color: white;
+}
+
+.view-profile-btn:hover {
+    background-color: #1976D2;
+}
+
+.delete-contact-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-contact-btn:hover {
+    background-color: #d32f2f;
+}
+
+.no-contacts {
+    text-align: center;
+    color: #888;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-list-controls {
+        flex-direction: column;
+    }
+
+    .search-input {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

@@ -8,8 +8,8 @@ import './ContactScreen.css';
 const ContactScreen = () => {
     const navigate = useNavigate();
 
-    const Chat = (id_contacto) => {
-        navigate(`/chat/${id_contacto}`);
+    const navigateToChat = (contactId) => {
+        navigate(`/chat/${contactId}`);
     };
 
     return (
@@ -23,14 +23,14 @@ const ContactScreen = () => {
                         <i className='bi bi-three-dots-vertical'></i>
                     </div>
                 </div>
-                <ContactList contactos={DATA_CONTACTOS} onEdit={Chat} />
-            <div className='home-footer'>
-                <i className="bi bi-chat-square-text"></i>
-                <i className="bi bi-people"></i>
-                <i className="bi bi-telephone"></i>
+                <ContactList contactos={DATA_CONTACTOS} onSelect={navigateToChat} />
+                <div className='home-footer'>
+                    <i className="bi bi-chat-square-text"></i>
+                    <i className="bi bi-people"></i>
+                    <i className="bi bi-telephone"></i>
+                </div>
             </div>
         </div>
-    </div>
     );
 };
 

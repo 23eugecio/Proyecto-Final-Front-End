@@ -7,19 +7,17 @@ const GlobalContext = createContext();
 export const initialContacts = DATA_CONTACTOS;
 
 export const GlobalProvider = ({ children }) => {
-
     const [contacts, setContacts] = useState(() => {
         try {
             const savedContacts = sessionStorage.getItem('contacts');
             return savedContacts ? JSON.parse(savedContacts) : initialContacts;
         } catch (error) {
-            console.error('Error loading contacts from sessionStorage:', error);
+            console.error('Error loading contacts from sessionStorage:', error)
             return initialContacts;
         }
     });
 
     const navigate = useNavigate();
-
 
     useEffect(() => {
         try {
@@ -29,22 +27,20 @@ export const GlobalProvider = ({ children }) => {
         }
     }, [contacts]);
 
-
     const handleContactProfile = (id) => {
         try {
             const contact = contacts.find((contact) => contact.id === id);
             if (contact) {
-                navigate(`/profile/${id}`, { state: { contact } });
+                navigate(`/contact/${id}`, { state: { contact } });
             } else {
                 console.error('Contact not found');
-                navigate('/'); 
+                navigate(`/chat/${id}`); 
             }
         } catch (error) {
             console.error('Error accessing contact profile:', error);
             navigate('/');
         }
     };
-
 
     const handleCreateContact = (contactData) => {
         try {
@@ -59,12 +55,11 @@ export const GlobalProvider = ({ children }) => {
                 return newContacts;
             });
 
-            navigate('/');
+            navigate('/contacts');
         } catch (error) {
             console.error('Error creating contact:', error);
         }
     };
-
 
     const handleEditContact = (id, updatedContact) => {
         try {
@@ -80,12 +75,12 @@ export const GlobalProvider = ({ children }) => {
                 );
                 return updatedContacts;
             });
+
+            navigate('/contacts');
         } catch (error) {
             console.error('Error updating contact:', error);
-
         }
     };
-
 
     const handleDeleteContact = (id) => {
         try {
@@ -93,7 +88,7 @@ export const GlobalProvider = ({ children }) => {
                 const filteredContacts = prevContacts.filter(contact => contact.id !== id);
                 return filteredContacts;
             });
-            navigate('/');
+            navigate('/contacts');
         } catch (error) {
             console.error('Error deleting contact:', error);
         }
@@ -105,7 +100,6 @@ export const GlobalProvider = ({ children }) => {
         handleCreateContact,
         handleEditContact,
         handleDeleteContact,
-
     };
 
     return (
@@ -114,7 +108,6 @@ export const GlobalProvider = ({ children }) => {
         </GlobalContext.Provider>
     );
 };
-
 
 export const useGlobalContext = () => {
     const context = useContext(GlobalContext);
@@ -125,3 +118,106 @@ export const useGlobalContext = () => {
 };
 
 export default GlobalContext;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

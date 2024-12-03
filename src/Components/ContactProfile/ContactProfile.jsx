@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 
 
 
-const ContactProfile = ({ contact, onEdit, onCreate }) => {
+const handleContactProfile = ({ contact, onEdit, onCreate }) => {
 
     const navigate = useNavigate()
 
@@ -59,4 +59,4 @@ const ContactProfile = ({ contact, onEdit, onCreate }) => {
     )
 }
 
-export default ContactProfile
+export default handleContactProfile

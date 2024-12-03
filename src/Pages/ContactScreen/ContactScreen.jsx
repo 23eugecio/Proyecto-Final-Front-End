@@ -6,6 +6,7 @@ import '../../App.css';
 import './ContactScreen.css';
 
 const ContactScreen = () => {
+
     const navigate = useNavigate();
 
     const navigateToChat = (contactId) => {

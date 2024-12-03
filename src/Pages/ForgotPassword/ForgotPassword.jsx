@@ -1,4 +1,4 @@
-/* import React, { useState } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { POST } from '../../fetching/http.fetching'
 import './ForgotPassword.css'
@@ -71,4 +71,3 @@ const ForgotPassword = () => {
 }
 
 export default ForgotPassword
- */

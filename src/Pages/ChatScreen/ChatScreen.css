@@ -40,7 +40,7 @@
     background-color: #45a049;
 }
 
-/* Responsive Design */
+
 @media (max-width: 600px) {
     .app-container {
         width: 100%;

@@ -1,46 +1,45 @@
-/* import React, { useState } from 'react'
-import { useParams, Link, useNavigate } from 'react-router-dom'
-
+import React from 'react'
+import { Link, useParams } from 'react-router-dom'
+import { extractFormData } from '../../utils/extractFormData'
 
 const ResetPassword = () => {
-    const { reset_token } = useParams()
-    const navigate = useNavigate()
-    const [password, setPassword] = useState('')
-    const [error, setError] = useState('')
-    const [success, setSuccess] = useState('')
+    const {reset_token} = useParams()
 
-    const handleSubmitResetForm = async (event) => {
-        event.preventDefault()
-        setError('')
-        setSuccess('')
-
-        if (!password) {
-            setError('Password is required')
-            return
-        }
-
-        try {
-            const response = await fetch(`http://localhost:3000/api/auth/reset-password/${reset_token}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ password })
-            })
-
-            const body = await response.json()
-
-            if (response.ok) {
-                setSuccess('Password reset successfully')
-                navigate('/login')
-            } else {
-                setError(body.errors?.[0] || 'Failed to reset password')
-            }
-        } catch (error) {
-            setError('An unexpected error occurred')
-            console.error(error)
-        }
+  const handleSubmitResetForm = (e) => {
+    e.preventDefault()
+    const form_HTML = e.target
+    const form_Values = new FormData(form_HTML)
+    const form_fields = {
+        'password': ''
     }
+    const form_values_object = extractFormData(form_fields, form_Values)
+    fetch('http://localhost:3000/api/auth/reset-password/' + reset_token, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json' 
+        },
+        body: JSON.stringify(form_values_object)
+    })
+        .then(
+            (response) => { 
+                console.log({ response }) 
+                return response.json()
+            }
+        )
+        .then(
+            (body) => {
+
+                if(!body.ok){
+
+              }
+                    console.log({body})
+            }
+        )
+        .catch(
+            (error) => { console.error(error) }
+        )
+    }
+
 
     return (
         <div className="reset-password-container">
@@ -48,7 +47,7 @@ const ResetPassword = () => {
             <p>Complete the form below to reset your password</p>
             
             <form onSubmit={handleSubmitResetForm}>
-                <div>
+                <div className="form-group">
                     <label htmlFor='password'>New Password:</label>
                     <input 
                         type="password"
@@ -58,13 +57,19 @@ const ResetPassword = () => {
                         onChange={(e) => setPassword(e.target.value)}
                         placeholder='Enter new password' 
                         required
+                        minLength={8}
                     />
                 </div>
                 
                 {error && <div className="error-message">{error}</div>}
-                {success && <div className="success-message">{success}</div>}
                 
-                <button type='submit'>Reset Password</button>
+                <button 
+                    type='submit' 
+                    disabled={loading}
+                    className="reset-password-button"
+                >
+                    {loading ? 'Resetting...' : 'Reset Password'}
+                </button>
             </form>
             
             <div className="form-links">
@@ -75,4 +80,4 @@ const ResetPassword = () => {
     )
 }
 
-export default ResetPassword */
+export default ResetPassword

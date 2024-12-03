@@ -1,105 +1,146 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { getUnnauthenticatedHeaders, POST } from '../../fetching/http.fetching';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { extractFormData } from '../../utils/extractFormData'
+import useForm from '../../Hooks/useForm'
+import { POST, getUnnauthenticatedHeaders } from '../../fetching/http.fetching'
+import './Register.css'
+
 
 const Register = () => {
-    const navigate = useNavigate();
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        password: ''
-    });
-    const [error, setError] = useState('')
-    const [success, setSuccess] = useState('')
-    const handleChangeInputValue = (e) => {
-        const { name, value } = e.target;
-        setFormData(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
-    };
+
+    const form_fields = {
+        'name': '',
+        'email': '',
+        'password': ''
+    }
+    const {form_values_state, handleChangeInputValue} = useForm(form_fields)
 
     const handleSubmitRegisterForm = async (event) => {
-        event.preventDefault();
-        setError('')
-        setSuccess('')
+        event.preventDefault()
+        const form_HTML = event.target
 
-
-        if (!formData.name || !formData.email || !formData.password) {
-            setError('Please fill in all fields')
-            return;
-        }
-
-        try {
-            const body = await POST('http://localhost:3000/api/auth/register', {
+        const body = await POST(
+            'http://localhost:3000/api/auth/register',
+            {
                 headers: getUnnauthenticatedHeaders(),
-                body: JSON.stringify(formData)
-            });
-
-            if (body.ok) {
-                setSuccess('Registration successful! Please check your email to verify your account.')
-                navigate('/login')
-            } else {
-                setError(body.errors?.[0] || 'Registration failed');
+                body: JSON.stringify(form_values_object)
             }
-        } catch (err) {
-            setError('An unexpected error occurred');
-            console.error(err);
-        }
-    };
-
+        )
+        console.log(body)
+    }
     return (
         <div className="register-container">
-            <h1>Register for WhatsApp</h1>
-            <form onSubmit={handleSubmitRegisterForm}>
-                <div>
-                    <label htmlFor='name'>Name:</label>
-                    <input 
-                        type="text"
-                        name='name' 
-                        id='name' 
-                        placeholder='Enter your name' 
-                        value={formData.name}
-                        onChange={handleChangeInputValue} 
-                        required
+            <form className="register-form" onSubmit={handleSubmitRegisterForm}>
+            <h1>WhatsApp Register!</h1>
+                <div className="form-group">
+                    <label htmlFor='name'>Write your name:</label>
+                    <input
+                        name='name'
+                        id='name'
+                        placeholder='Name'
+                        value={form_values_state.name}
+                        onChange={handleChangeInputValue}
                     />
                 </div>
-                <div>
-                    <label htmlFor='email'>Email:</label>
-                    <input 
-                        type="email"
-                        name='email' 
-                        id='email' 
-                        placeholder='juan@gmail.com' 
-                        value={formData.email}
-                        onChange={handleChangeInputValue} 
-                        required
+                <div className="form-group">
+                    <label htmlFor='email'>Write your email:</label>
+                    <input
+                        name='email'
+                        id='email'
+                        placeholder='john@gmail.com'
+                        value={form_values_state.email}
+                        onChange={handleChangeInputValue}
                     />
                 </div>
-                <div>
-                    <label htmlFor='password'>Password:</label>
-                    <input 
-                        type="password"
-                        name='password' 
-                        id='password' 
-                        placeholder='Enter your password' 
-                        value={formData.password}
-                        onChange={handleChangeInputValue} 
-                        required
+                <div className="form-group">
+                    <label htmlFor='password'>Current password:</label>
+                    <input
+                        name='password'
+                        id='password'
+                        type='password'
+                        placeholder='Password'
+                        value={form_values_state.password}
+                        onChange={handleChangeInputValue}
                     />
                 </div>
-
-                {error && <div className="error-message">{error}</div>}
-                {success && <div className="success-message">{success}</div>}
-
-                <button type='submit'>Register</button>
-            </form>
-            <div className="form-info">
-                <p>Please verify your email after registration</p>
-                <span>Already have an account? <Link to='/login'>Login</Link></span>
+                <button className="register-button" type='submit'>
+                    Register
+                </button>
+            <span>If you already have an account, </span>
+            <div>
+                <button className="login-button">
+                <Link to='/login'>Login</Link>
+            </button>
             </div>
+            </form>
         </div>
     );
-}
+};
 
 export default Register;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

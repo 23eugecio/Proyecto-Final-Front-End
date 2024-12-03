@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useGlobalContext } from '../../Context/GlobalContext';
 
-const CreateContact = () => {
+const handleCreateContact = () => {
     const { handleCreateContact } = useGlobalContext();
     const [formData, setFormData] = useState({
         name: '',
@@ -82,4 +82,4 @@ const CreateContact = () => {
     );
 };
 
-export default CreateContact;
+export default handleCreateContact;

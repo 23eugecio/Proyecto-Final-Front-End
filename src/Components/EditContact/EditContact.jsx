@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useGlobalContext } from '../../Context/GlobalContext';
+import './EditContact.css';
 
-const EditContact = () => {
+const handleEditContact = () => {
     const { id } = useParams();
     const { contacts, handleEditContact } = useGlobalContext();
     const [formData, setFormData] = useState({
@@ -59,4 +60,4 @@ const EditContact = () => {
     );
 };
 
-export default EditContact;
+export default handleEditContact;

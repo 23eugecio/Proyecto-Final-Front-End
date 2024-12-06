@@ -1,11 +1,16 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { extractFormData } from '../../utils/extractFormData'
+import ENVIROMENT from '../../enviroment'
+
+
 
 const ResetPassword = () => {
-    const {reset_token} = useParams()
-
-  const handleSubmitResetForm = (e) => {
+    const {reset_token} = useParams()   
+    const [password, setPassword] = React.useState('')
+    const [loading, setLoading] = React.useState(false)
+    const [error, setError] = React.useState(null)
+    const handleSubmitResetForm = (e) => {
     e.preventDefault()
     const form_HTML = e.target
     const form_Values = new FormData(form_HTML)
@@ -13,7 +18,7 @@ const ResetPassword = () => {
         'password': ''
     }
     const form_values_object = extractFormData(form_fields, form_Values)
-    fetch('http://localhost:3000/api/auth/reset-password/' + reset_token, {
+    fetch(`${ENVIROMENT.URL_BACKEND}/api/auth/reset-password/` + reset_token, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json' 
@@ -28,10 +33,10 @@ const ResetPassword = () => {
         )
         .then(
             (body) => {
-
+                setLoading(false)
                 if(!body.ok){
-
-              }
+                    setError(body.errors?.[0] || 'Failed to reset password')
+        }
                     console.log({body})
             }
         )

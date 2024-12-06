@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { extractFormData } from '../../utils/extractFormData';
 import './Login.css';
 import { getUnnauthenticatedHeaders, POST } from '../../fetching/http.fetching';
+import ENVIROMENT from '../../enviroment';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -22,7 +23,7 @@ const Login = () => {
                 setError('Email and Password are required');
                 return;
             }
-            const response = await POST('http://localhost:3000/api/auth/login', {
+            const response = await POST(`${ENVIROMENT.URL_BACKEND}/api/auth/login`, {
                 headers: getUnnauthenticatedHeaders(),
                 body: JSON.stringify(form_values_state)
             });

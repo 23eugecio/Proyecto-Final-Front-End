@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { POST } from '../../fetching/http.fetching'
 import './ForgotPassword.css'
+import ENVIROMENT from '../../enviroment'
 
 const ForgotPassword = () => {
     const [email, setEmail] = useState('')
@@ -22,7 +23,7 @@ const ForgotPassword = () => {
             const form_values = new FormData()
             form_values.append('email', email)
             
-            const body = await POST('http://localhost:3000/api/auth/forgot-password', { email })
+            const body = await POST(`${ENVIROMENT.URL_BACKEND}/api/auth/forgot-password`, { email })
             
             if (body.ok) {
                 setSuccess('Password reset link sent successfully')

@@ -4,6 +4,7 @@ import { extractFormData } from '../../utils/extractFormData'
 import useForm from '../../Hooks/useForm'
 import { POST, getUnnauthenticatedHeaders } from '../../fetching/http.fetching'
 import './Register.css'
+import ENVIROMENT from '../../enviroment'
 
 const Register = () => {
     const navigate = useNavigate()
@@ -25,7 +26,7 @@ const Register = () => {
 
         try {
             const body = await POST(
-                'http://localhost:3000/api/auth/register',
+                `${ENVIROMENT.URL_BACKEND}/api/auth/register`,
                 {
                     headers: getUnnauthenticatedHeaders(),
                     body: JSON.stringify(form_values_state)
@@ -33,7 +34,6 @@ const Register = () => {
             )
             console.log(body)
             
-            // Navigate to login or dashboard after successful registration
             navigate('/login')
         } catch (error) {
             setError(error.message || 'Registration failed')

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { GET, getAuthenticatedHeaders } from "../fetching/http.fetching";
 import { useNavigate } from "react-router-dom";
+import ENVIROMENT from "../enviroment";
+
 
 const useMessageDetail = (message_id) => {
     const [messageDetailState, setMessageDetailState] = useState(null);
@@ -11,7 +13,7 @@ const useMessageDetail = (message_id) => {
     const getMessageDetail = async () => {
         try {
             const response = await GET(
-                `http://localhost:3000/api/messages/${message_id}`,
+                `${ENVIROMENT.URL_BACKEND}/api/messages/${message_id}`,
                 {
                     headers: getAuthenticatedHeaders(),
                 }

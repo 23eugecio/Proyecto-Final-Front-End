@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import useForm from '../../Hooks/useForm'
 import { POST, getUnnauthenticatedHeaders } from '../../fetching/http.fetching'
@@ -7,9 +7,6 @@ import ENVIROMENT from '../../enviroment'
 
 
 const Register = () => {
-    const navigate = useNavigate()
-    const [error, setError] = useState('')
-    const [isLoading, setIsLoading] = useState(false)
 
     const form_fields = {
         'name': '',
@@ -19,12 +16,11 @@ const Register = () => {
     
     const {form_values_state, handleChangeInputValue} = useForm(form_fields)
 
+    const navigate = useNavigate()
     const handleSubmitRegisterForm = async (event) => {
-        event.preventDefault()
-        setError('')
-        setIsLoading(true)
-
         try {
+            event.preventDefault()
+
             const body = await POST(
                 `${ENVIROMENT.URL_BACKEND}/api/auth/register`,
                 {
@@ -35,14 +31,16 @@ const Register = () => {
             console.log(body)
             navigate('/login')
         } catch (error) {
-            setError(error.message || 'Registration failed')
-            setIsLoading(false)
+            if(!error.ok){
+                setError({error: error.message})
+            }
         }
     }
 
     return (
         <div className="register-container">
-            <form className="register-form" onSubmit={handleSubmitRegisterForm}>
+            <form className="register-form" 
+            onSubmit={handleSubmitRegisterForm}>
 
                 <h1>WhatsApp Register!</h1>
 

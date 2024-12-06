@@ -1,4 +1,4 @@
-export const DATA_CONTACTOS = [
+/* export const DATA_CONTACTOS = [
     {
         nombre: 'Matilda',
         thumbnail: '/Imagenes/girl-curly.webp',
@@ -158,4 +158,4 @@ export const DATA_CONTACTOS = [
     }
 ];
 
-export default DATA_CONTACTOS
+export default DATA_CONTACTOS */

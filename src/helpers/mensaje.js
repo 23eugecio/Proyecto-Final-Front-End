@@ -1,4 +1,4 @@
-import data from '../Data/contactsData';
+/* import data from '../Data/contactsData';
 import { obtenerMensajes } from './mensaje';
 import { agregarMensajes } from './mensaje';
 
@@ -18,3 +18,4 @@ export const agregarMensajes = (nuevoMensaje) => {
     mensajesGuardados.push(nuevoMensaje);
     localStorage.setItem('DATA_CONTACTOS', JSON.stringify(mensajesGuardados));
 } 
+ */

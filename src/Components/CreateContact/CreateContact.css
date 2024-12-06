@@ -1,82 +1,106 @@
 
-.create-contact-form {
-    width: 100%;
-    max-width: 400px;
+.create-contact-container {
+    max-width: 500px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
+    background-color: #f0f2f5;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', 'Roboto', Helvetica, Arial, sans-serif;
 }
 
-.create-contact-form > div {
+.create-contact-form {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.create-contact-form h2 {
+    color: #128C7E;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.form-group {
     margin-bottom: 15px;
+    position: relative;
 }
 
 .create-contact-form input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s ease;
 }
 
-.create-contact-form button {
-    width: 100%;
+.create-contact-form input:focus {
+    outline: none;
+    border-color: #128C7E;
+    box-shadow: 0 0 0 2px rgba(18, 140, 126, 0.2);
+}
+
+.create-contact-form input.input-error {
+    border-color: #FF5E5E;
+}
+
+.error-message {
+    color: #FF5E5E;
+    font-size: 14px;
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+}
+
+.global-error-message {
+    background-color: #FFE5E5;
+    color: #D8000C;
     padding: 10px;
-    background-color: #007bff;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #128C7E;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
+    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.create-contact-form button:hover {
-    background-color: #0056b3;
+.submit-button:hover {
+    background-color: #0E6F5C;
 }
 
-.error-message {
-    color: red;
-    font-size: 0.8rem;
-    margin-top: 5px;
+.submit-button:disabled {
+    background-color: #A9D6CC;
+    cursor: not-allowed;
 }
 
 
-@media screen and (max-width: 480px) {
+@media (max-width: 600px) {
+    .create-contact-container {
+        margin: 0;
+        height: 100%;
+    }
+
     .create-contact-form {
-        width: 90%;
-        padding: 15px;
-    }
-
-    .create-contact-form input {
-        font-size: 0.9rem;
-        padding: 8px;
-    }
-
-    .create-contact-form button {
-        font-size: 0.9rem;
-    }
-}
-
-
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    .create-contact-form {
-        max-width: 350px;
+        margin: 10px;
         padding: 15px;
     }
 }
 
 
-@media screen and (min-width: 769px) {
-    .create-contact-form {
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-}
-
-
-@media (hover: none) and (pointer: coarse) {
-    .create-contact-form input,
-    .create-contact-form button {
-        min-height: 44px;
-        min-width: 44px;
-    }
+.create-contact-form input::placeholder {
+    color: #a0a0a0;
 }

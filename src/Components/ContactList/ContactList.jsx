@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { useGlobalContext } from '../../Context/GlobalContext';
+import { useGlobalContext } from '../../Context/AuthContext';
 import { Link } from 'react-router-dom';
 import './ContactList.css';
 

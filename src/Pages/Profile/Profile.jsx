@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import { ContactProfile } from '../../Components'
 import './Profile.css'
-import GlobalContext from '../../Context/GlobalContext'
+import GlobalContext from '../../Context/AuthContext'
 import DATA_CONTACTOS from '../../Data/contactsData'
 
 

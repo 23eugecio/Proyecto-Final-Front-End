@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { extractFormData } from '../../utils/extractFormData'
 import useForm from '../../Hooks/useForm'
 import { POST, getUnnauthenticatedHeaders } from '../../fetching/http.fetching'
-import validateForm from '../../utils/validateForm'
 import './Register.css'
 import ENVIROMENT from '../../enviroment'
 

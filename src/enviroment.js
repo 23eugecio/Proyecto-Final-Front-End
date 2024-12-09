@@ -1,7 +1,7 @@
 
 const ENVIROMENT = {
     'URL_BACKEND' : 'http://localhost:5000',
-    'URL_FRONTEND' : 'http://localhost:5173'
+    'URL_FRONTEND' : 'https://proyecto-final-front-end-khaki.vercel.app/'
 }
 
 

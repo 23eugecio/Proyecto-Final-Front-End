@@ -33,7 +33,7 @@ const Register = () => {
                 throw new Error('Register error')
             }
         } catch (error) {
-            setError('An unexpected error occurred')
+            console.error('Register error:', error)
         }
     }
     

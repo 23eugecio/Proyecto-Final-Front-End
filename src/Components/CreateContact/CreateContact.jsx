@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useGlobalContext } from '../../Context/GlobalContext';
+import { AuthContextProvider } from '../../Context/AuthContext';
 import './CreateContact.css';
 
 const CreateContact = () => { 
     const navigate = useNavigate();
-    const { handleCreateContact } = useGlobalContext();
+    const { handleCreateContact } = AuthContextProvider();
     const [formData, setFormData] = useState({
         name: '',
         email: '',

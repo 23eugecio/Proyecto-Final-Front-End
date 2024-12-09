@@ -1,7 +1,7 @@
 import React from 'react'
 import './HeaderMessage.css'
 import { Link, useParams } from 'react-router-dom'
-import { DATA_CONTACTOS } from '../../../Data/contactsData'
+/* import { DATA_CONTACTOS } from '../../../Data/contactsData' */
 
 const HeaderMessage = ({ contactName }) => {
     const { contact_id } = useParams();

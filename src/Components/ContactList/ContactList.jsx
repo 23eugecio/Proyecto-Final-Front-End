@@ -1,10 +1,10 @@
 import React, { useState, useMemo } from 'react';
-import { useGlobalContext } from '../../Context/AuthContext';
 import { Link } from 'react-router-dom';
 import './ContactList.css';
+import { AuthContextProvider } from '../../Context/AuthContext';
 
 const ContactList = () => {
-    const { contacts, handleContactProfile, handleDeleteContact } = useGlobalContext();
+    const { contacts, handleContactProfile, handleDeleteContact } = AuthContextProvider();
     const [searchTerm, setSearchTerm] = useState('');
     const [sortBy, setSortBy] = useState('name');
 

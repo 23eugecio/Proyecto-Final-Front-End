@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams, useNavigate } from 'react-router-dom';
-import { DATA_CONTACTOS } from '../../Data/contactsData.js';
+import { Link, useParams, useNavigate,  } from 'react-router-dom';
+/* import { DATA_CONTACTOS } from '../../Data/contactsData.js'; */
 import { FooterMessage, HeaderMessage } from '../../Components/index.js';
 import MessageContainer from '../../Components/Messages/MessageContainer/MessageContainer.jsx';
 import '../../App.css';
@@ -12,7 +12,7 @@ const ChatScreen = () => {
     const [messages, setMessages] = useState([]);
 
     useEffect(() => {
-        const foundContact = DATA_CONTACTOS.find(
+        const foundContact = useState.find(
             contact => contact.id.toString() === contact_id
         );
 
@@ -43,11 +43,11 @@ const ChatScreen = () => {
 
         setMessages(prevMessages => {
             const updatedMessages = [...prevMessages, newMessage];
-            const contactIndex = DATA_CONTACTOS.findIndex(
+            const contactIndex = useState.findIndex(
                 c => c.id.toString() === contact_id
             );
             if (contactIndex !== -1) {
-                DATA_CONTACTOS[contactIndex].mensajes = updatedMessages;
+                [contactIndex].mensajes = updatedMessages;
             }
 
             return updatedMessages;

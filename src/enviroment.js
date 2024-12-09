@@ -1,8 +1,8 @@
 
-
 const ENVIROMENT = {
-    'URL_BACKEND' : 'https://proyecto-final-back-end-eta.vercel.app'
+    'URL_BACKEND' : 'http://localhost:5000',
+    'URL_FRONTEND' : 'http://localhost:5173'
 }
 
 
-export default ENVIROMENT
+export default ENVIROMENT 

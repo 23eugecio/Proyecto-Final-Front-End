@@ -2,14 +2,14 @@ import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import { ContactProfile } from '../../Components'
 import './Profile.css'
-import GlobalContext from '../../Context/AuthContext'
-import DATA_CONTACTOS from '../../Data/contactsData'
+import {  AuthContextProvider  } from '../../Context/AuthContext'
+/* import DATA_CONTACTOS from '../../Data/contactsData' */
 
 
 const Profile = () => {
     const { contact_id } = useParams()
-    const { contacts, handleCreateContact, handleEditContact } = useContext(GlobalContext)
-    const contact = DATA_CONTACTOS.find(contact => contact.id.toString() === contact_id)
+    const { contacts, handleCreateContact, handleEditContact } = useContext(AuthContextProvider())
+    const contact = contacts.find(contact => contact.id.toString() === contact_id)
 console.log(contacts)
     return (
         <div className='profile-background'>

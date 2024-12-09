@@ -29,7 +29,6 @@ const handleContactProfile = ({ contact, onEdit, onCreate }) => {
             <div><h3 className="profile-contact-name">{contact.nombre}</h3>
             </div>
             <div className='profile-last-connection'>Última sesión: {contact.ultima_conexion}</div>
-
             <div className="profile-icons">
                 <button>
                     <i className="bi bi-telephone"> Llamar</i>

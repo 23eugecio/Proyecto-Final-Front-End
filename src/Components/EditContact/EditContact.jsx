@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useGlobalContext } from '../Context/GlobalContext';
+import { AuthContextProvider } from '../../Context/AuthContext';
 import './EditContact.css';
 
 const EditContact = () => {
     const { id } = useParams();
     const navigate = useNavigate();
-    const { contacts, handleEditContact } = useGlobalContext();
+    const { contacts, handleEditContact } = AuthContextProvider();
     const [formData, setFormData] = useState({
         name: '',
         email: '',

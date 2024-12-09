@@ -1,9 +1,10 @@
+
 :root {
-    --whatsapp-green: #25D366;
-    --whatsapp-green-dark: #128C7E;
-    --background-gray: #f0f2f5;
-    --text-color: #4a4a4a;
-    --error-red: #FF5252;
+    --primary-color: #25D366;
+    --secondary-color: #075E54;
+    --background-color: #f5f5f5;
+    --text-color: #333;
+    --error-color: #dc3545;
 }
 
 .register-container {
@@ -11,88 +12,152 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: var(--background-gray);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--background-color);
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
 .register-form {
     background-color: white;
-    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px #0000001a;
     width: 100%;
     max-width: 400px;
+    padding: 2rem;
+    box-sizing: border-box;
 }
 
 .register-form h1 {
     text-align: center;
-    color: var(--whatsapp-green-dark);
-    margin-bottom: 20px;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
     color: var(--text-color);
+    font-weight: 500;
 }
 
 .form-group input {
     width: 100%;
-    padding: 10px;
+    padding: 0.75rem;
     border: 1px solid #ddd;
     border-radius: 4px;
+    font-size: 1rem;
     transition: border-color 0.3s ease;
 }
 
 .form-group input:focus {
     outline: none;
-    border-color: var(--whatsapp-green);
-}
-
-.error-message {
-    background-color: rgba(255, 82, 82, 0.1);
-    color: var(--error-red);
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 15px;
-    text-align: center;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px #25d36633;
 }
 
 .register-button {
     width: 100%;
-    padding: 12px;
-    background-color: var(--whatsapp-green);
+    padding: 0.75rem;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: 4px;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 1rem;
 }
 
 .register-button:hover {
-    background-color: var(--whatsapp-green-dark);
+    background-color: var(--secondary-color);
 }
 
 .register-button:disabled {
-    background-color: #a0a0a0;
+    background-color: white;
     cursor: not-allowed;
+}
+
+.error-message {
+    display:flex;
+    flex-direction: column;
+    color: var(--error-color);
+    text-align: center;
 }
 
 .form-links {
     text-align: center;
-    margin-top: 15px;
+    margin-top: 1rem;
+    font-size: 0.9rem;
 }
 
 .login-link {
-    color: var(--whatsapp-green);
+    color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
 }
 
+.login-link, .login-link span {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
 .login-link:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 480px) {
+    .register-form {
+        padding: 1.5rem;
+        width: 95%;
+        max-width: 100%;
+    }
+
+    .register-form h1 {
+        font-size: 1.5rem;
+    }
+
+    .form-group input,
+    .register-button {
+        font-size: 0.95rem;
+        padding: 0.65rem;
+    }
+}
+
+
+input:focus,
+button:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    .register-container {
+        background-color: #6b6a6a;
+        color: #e0e0e0;
+    }
+
+    .register-form {
+        background-color: #464242;
+        box-shadow: 0 4px 6px rgba(150, 146, 146, 0.3);
+    }
+
+    .register-form h1 {
+        color: var(--primary-color);
+    }
+
+    .form-group input {
+        background-color: #2C2C2C;
+        border-color: #444;
+        color: #e0e0e0;
+    }
+
+    .form-group label {
+        color: #e0e0e0;
+    }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ContactList } from '../../Components/index.js';
-import { DATA_CONTACTOS } from '../../Data/contactsData.js';
+/* import { DATA_CONTACTOS } from '../../Data/contactsData.js'; */
 import '../../App.css';
 import './ContactScreen.css';
 

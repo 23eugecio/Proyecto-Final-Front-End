@@ -14,7 +14,7 @@ const Register = () => {
     
     const {form_values_state, handleChangeInputValue} = useForm(form_fields)
     const navigate = useNavigate()
-console.log(form_values_state)
+
     const handleSubmitRegisterForm = async (event) => {
         try {
             event.preventDefault()
